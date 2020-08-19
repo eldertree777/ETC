@@ -24,4 +24,10 @@
 
 
 - 대푯값과 분포
-- boxplot
+- boxplot : 통계의 시각화
+
+- 삼전도와 상관관계
+- scatter plot
+
+- 원인 -> 결과
+
