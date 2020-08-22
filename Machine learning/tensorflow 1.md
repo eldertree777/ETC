@@ -33,6 +33,7 @@
     # 4. 모델을 이용합니다.
         model.predict(독립)
         model.predict([[15]])
+        # model.predict(독립[0:10])
 ```
 
 # 실습환경  Google Colaboratory
@@ -107,3 +108,36 @@
 - import 라이브러리 as 불러올변수
 - x = tf.keras.layers.Input(shape=[독립변수 칼럼수])
 - y = tf.keras.layers.Dense(종속변수 칼럼수)(x)
+
+- weight , bias
+
+## 모델의 수식 확인
+- model.get_weights()
+
+- [deeplearning workbook](https://docs.google.com/spreadsheets/d/11DAONRZ92ob0T0YRIT5KgU9vNeO28bYNvteu_-fbRV0/edit#gid=0)
+
+
+# 분류형 (분류 예측)
+
+- 원핫잇코딩(수치화)
+- 인코딩 = pd.get_dummies(아이리스)
+
+```py
+# 모델의 구조를 만듭니다.
+x = tf.keras.layers.Input(shape = [4])
+y = tf.keras.layers.Dense(3, activation='softmax')(x)
+model = tf.keras.models.Model(x,y)
+model.compile(loss = 'categorical_crossentropy' , metrics = 'accuracy')
+```
+- softmax : 0,1으로 값을 만듬
+
+
+# 히든레이어
+
+```py
+X = tf.keras.layers.Input(shape=[13])
+H = tf.keras.layers.Dense(10,activation = 'swish')(X)
+Y = tf.keras.layers.Dense(1)(H)
+model = tf.keras.models.Model(X,Y)
+model.compile(loss='mse', metrics = 'accuracy')
+```
