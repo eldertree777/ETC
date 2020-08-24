@@ -141,3 +141,7 @@ Y = tf.keras.layers.Dense(1)(H)
 model = tf.keras.models.Model(X,Y)
 model.compile(loss='mse', metrics = 'accuracy')
 ```
+
+# BatchNormalization
+
+- Dense레이어와 activation 레이어 사이에 BatchNormalization위치하면 성능향상
