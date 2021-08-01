@@ -1,0 +1,82 @@
+JFX 이벤트 처리
+1. onAction=#handleEvent"
+2.btn.setOnAction(event -> sadf);
+3. btn.setOnAction(new EventHandler<ActionEvent>(){
+	void handle(ActionEvent event){
+		Platform.exit(); }}
+
+Insets(top,left,bottom,right)
+
+컨테이너 javafx.scene.layout
+
+- AnchorPane
+	root.setPrefWidth()
+	root.setPrefHeight()
+	la.setLayoutX()
+	la.setLayoutY()
+
+-BorderPane
+	root.setCenter(node)
+	root.setTop(node)
+	root.setLeft(node)
+	root.setRight(node)
+
+-FlowPane
+	root.setPrefWidth()
+	root.setPrefHeight()
+	root.setVgap()
+	root.setHgap()
+
+-TilePane
+	root.setPrefWidth()
+	root.setPrefHeight()
+	root.setVgap()
+	root.setHgap()
+
+-GridPane
+	root.setPrefSize();
+	root.setPadding();
+	root.setHgap(); root.setVgap();
+	GridPane.setHalignment(node, HPos.Right);// 글꼴 정렬
+	root.add(object, col, row, col_span, row_span);
+
+-StackPane
+	root.getChildren.addAll( btn1 ,btn2);
+
+-HBox,VBox
+	root.prefWidth()
+	root.prefHeight()
+	root.alignment()
+	root.spacing()
+ 	HBox.fillHeight()
+	VBox.fillWidth()
+	HBox.setHgrow(btn2, Priority.ALWAYS);
+
+Javafx 이벤트처리 :
+	이벤트 발생시 이벤트 헨들러에게 위임방식(맡김)
+	이벤트 발생 컨트럴과 이벤트 헨들러가 분리됨
+
+주요 이벤트
+	-ActionEvent
+	-KeyEvent
+	-MouseEvent
+	-MouseDragEvent
+	-WindowEvent
+
+익명클래스 
+btn.setOnAction(new EventHandler<ActionEvent>(){
+	public void handle(ActionEvent e){
+		System.exit();}});
+
+람다식
+(param1,param2 ) -> {code...}
+	매개변수 타입 생략가능
+	배개변수가 없을때는 ()만 기술가능
+	매개변수 1개일때 () 생략가능
+	실행코드가 한문장일때는 {} 생략가능
+
+btn.getText().equals
+btn.setText()
+
+
+KeyEvent.getCode() == KeyCode.

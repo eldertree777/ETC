@@ -1,0 +1,62 @@
+javaFx 주요특징
+ -FXML 및 SceneBuilder UI디자인과 자바코드 분리
+ -Swing 호환성
+
+JavaFx 애플리케이션 : 레이아웃+스타일+로직+리소스
+
+애플리케이션 구조
+ Stage
+ Scene
+ SceneGraph 트리형태의 자료구조
+
+javafx.application
+javafx.stage
+javafx.scene
+javafx.css
+javafx.event
+javafx.geometry
+javafx.animation
+
+Main extends Application
+	main(){ launch(args);} //두개의 스레드를 생성하여 실행시킴
+	start(Stage primaryStage){ }
+
+라이프 사이클
+ main() -> 기본생성자 ->launch : init() -> start() -> Platform.exit ->stop()
+
+Stage > Scene > Parent > UI controller
+
+VBox root = new VBox();
+root.getChildren().add(btn);
+Scene scene = new Scene(root);
+primaryStage.setScene(scene);
+
+root.setPrefSize(300,200) // 가로, 세로
+root.setAlignment(Pos.CENTER);
+
+레이아웃 : Scene에 포함된 다양한 컨텐츠
+FXML : xml기반의 레이아웃전용
+fxml 태그는 자바코드로 변환되어 실행
+
+class fx:value = ""
+class fx:constant=""
+class fx:factory = ""
+
+Padding vs Margin
+Padding은 안쪽여백을 말하며 컨트롤러가 커질수있음
+Margin은 바깥여백을 말하며 컨트롤러 사이 여백
+
+FXMLLoader loader = FXMLLoader(getClass().getResource("root.fxml");
+Parent root = (Parent)loader.load();
+
+or Parent root = FXMLLoader.load(getClass().getResource("root.fxml");
+
+fx:contorller ="application.RootController"
+fx:id = "btn1";
+onAction = "#handlebtnAction"
+@FXML 어노테이션
+setOnAction(event -> asdf());
+VBox.setSpacing : 컨트롤러간 간격
+
+RootController implements Initializable{
+	void initialize(URL loc, ResourceBundle){}

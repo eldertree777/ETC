@@ -1,0 +1,29 @@
+Button
+// 이미지를 포함하는 버튼 생성
+	Image imgCheck = new Image(getClass().getResourceAsStream("check.png"));
+	Button btn1 = new Button("Checked", new ImageView(imgCheck));
+
+// 이벤트 처리: 버튼의 이미지와 텍스트를 변경
+	Image imgCancel = new Image(getClass().getResourceAsStream("cancel.png"));
+	btn1.setOnAction(event -> {
+		if(btn1.getText().equals("Checked")) {
+			btn1.setText("Canceled");
+			btn1.setGraphic(new ImageView(imgCancel));
+		} else {
+			btn1.setText("Checked");
+			btn1.setGraphic(new ImageView(imgCheck));
+		}
+
+DropShadow shadow = new DropShadow();
+	btn2.addEventHandler(MouseEvent.MOUSE_ENTERED, event -> btn2.setEffect(shadow));
+	btn2.addEventHandler(MouseEvent.MOUSE_EXITED, event -> btn2.setEffect(null));
+		
+CheckBox
+RadioButton
+Label
+TextField
+TextArea
+ChoiceBox
+ComboBox
+DatePicker
+ColorPicker

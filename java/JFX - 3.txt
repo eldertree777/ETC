@@ -1,0 +1,103 @@
+속성 감시
+	ChangeListner 의 changed()
+
+속성의 구성 : Setter, Getter, Property
+속성 바인딩 : bind() , bindBidrectional() , unbind()
+
+btn.textProperty().addListener(new ChangeListner<String>(){
+	public void changed(ObservableValue<? extends String> obx,
+		String oldStr, String newStr){
+		code ....
+		}
+	});
+
+sld.valueProperty().addListener(new ChangeListener<NUmber>(){
+	public void changed(ObservableValue<? extends Number> obs.
+		Number oldNum, Number newNum){
+		code ....
+		}
+	});
+
+속성바인딩
+ta2.textProperty().bind(ta1.textProperty());
+ta2.textProperty().bindBidirectional(ta1.textProperty());
+Bindings.bindBidirectional(ta1.textProperty(),ta2.textProperty());
+
+해제
+ta2.textProperty().unbind();
+ta2.textProperty().unbindBidirectional(ta1.textProperty());
+Bindings.unbindBidirectional(ta1.textProperty(),ta2.textProperty());
+
+Bindings.divide(Property(), number)
+
+2Dshape
+Group root = new Group();
+
+Line
+-setStartX()
+-setStartY()
+-setEndX
+-setEndY
+
+Rectangle
+-setX()
+-setY()
+-setWidth()
+-setHeight()
+-setArcWidth, setArcHeight
+-setFill(); setStroke(Color.BLACK)
+
+Ellipse
+-setCenterX
+-setCenterY
+-setRadiusX , setRadiusY
+-setFill
+
+Polygon, PolyLine
+
+double points[] = new double[] {
+		100.0, 50.0,
+		300.0, 50.0,
+		350.0, 150.0,
+		300.0, 250.0,
+		100.0, 250.0,
+		50.0, 150.0
+	};
+
+Polygon pg = new Polygon(points);
+Polyline pl = new Polyline(points);
+
+Arc
+-setCenterX , setCenterY
+-setRadiusX, setRadiusY
+-setStartAngle
+-setLength
+-setType(ArcType.ROUND) //ArcType.OPRN
+-setFill
+-setStroke
+
+Transformations
+ Rotate
+	-setAngle
+	-setPivotX, setPivotY
+ Scale
+	-setX, setY
+Translate
+	-setX, setY ,setZ
+Shear
+
+shape.getTransfroms().addAll(rtt,scl,tsl)
+
+Text
+-setX(), setY()
+-setText(), getText()
+-setFont(Font.font("consolas",FontWeight.BOLD, FontPosture.REGULAR, 80))
+-setFill(), setStroke(), setStrokeWidth()
+-setStrikethrough(true)
+-setUnderline(true)
+
+Image 지원포멧: bmp,gif,png,jpg
+-setX, setY
+-setFitWidth, setFitHeight()
+-setReserveRatio()
+
