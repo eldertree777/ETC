@@ -1,0 +1,92 @@
+### Packages
+from easygui import fileopenbox
+import pandas as pd
+import numpy as np
+
+### Package
+from matplotlib import pyplot as plt
+### 그래프에 한글 표시를 위한 글꼴 설정
+plt.rcParams['font.family'] = 'Gulim'    # 'AppleGothic' in mac
+
+### Package
+import seaborn as sns
+
+
+### 타슈 이용현황: 2020.csv
+data_file = "./data/타슈/2020.csv"
+tashu_2020 = pd.read_csv(data_file, encoding = "cp949")
+
+### 자료형 변환: 실수 → 정수
+tashu_2020[['반납스테이션','이동거리']] = tashu_2020[['반납스테이션','이동거리']].astype('Int64')
+
+### 자료형 변환: 정수 → 문자
+tashu_2020[['대여스테이션','대여일시','반납스테이션','반납일시','회원구분']] = tashu_2020[['대여스테이션','대여일시','반납스테이션','반납일시','회원구분']].astype('string')
+
+### 타슈 스테이션 현황: 대전광역시_공영자전거(타슈) 위치(위경도) 현황_20200801.csv
+data_file = "./data/타슈/대전광역시_공영자전거(타슈) 위치(위경도) 현황_20200801.csv"
+tashu_station = pd.read_csv(data_file, encoding = "cp949")
+
+### 자료형 변환: 정수 → 문자
+tashu_station['연번'] = tashu_station['연번'].astype('string')
+
+### merge by values
+df_right = tashu_station[['연번','Station 스테이션/성명']]
+df_right.columns = ['대여스테이션','대여스테이션_이름']
+tashu_2020_station = tashu_2020.merge(df_right, left_on='대여스테이션', right_on='대여스테이션')
+
+### merge by values - left
+df_right = tashu_station[['연번','Station 스테이션/성명']]
+df_right.columns = ['반납스테이션','반납스테이션_이름']
+tashu_2020_station = tashu_2020_station.merge(df_right, left_on='반납스테이션', right_on='반납스테이션' , how='left')
+
+### Sort by '대여일시','반납일시' - ascending=[True, True]
+tashu_2020_station = tashu_2020_station.sort_values(by=['대여일시','반납일시'])
+
+### 회원구분 값
+idx = tashu_2020_station['회원구분'].astype('int')
+### 회원구분 수준
+col_levels = ['정회원','일반회원','비회원']
+### 변수 생성
+tashu_2020_station['회원구분2'] = [col_levels[idx[i]] for i in range(len(idx))]
+
+### Drop missing values
+df_use = tashu_2020_station.dropna(subset=['이동거리'])
+### Subset
+df_use = df_use[df_use['이동거리'] > 0]
+
+### 날자형 변수 생성 - 대여일시, 반납일시
+#df_use['대여일시'] = df_use['대여일시'].astype('str')
+df_use['대여일시_datetime'] = pd.to_datetime(df_use['대여일시'])
+#df_use['반납일시'] = df_use['반납일시'].astype('str')
+df_use['반납일시_datetime'] = pd.to_datetime(df_use['반납일시'])
+
+### 대여일 변수 생성
+df_use['대여일'] = df_use['대여일시_datetime'].dt.date
+
+### 대여시간 변수 생성
+diff_dt = df_use['반납일시_datetime'] - df_use['대여일시_datetime']
+df_use['대여시간_초'] = diff_dt.dt.total_seconds()
+
+### 대여일 별 대여수 & 대여시간(초)의 합
+df_group_date = df_use.groupby(['대여일']).apply(
+    lambda x: pd.Series(
+        {'대여수':len(x),
+         '대여시간_합':sum(x.대여시간_초)
+        }))
+
+### 자료 추출
+cnd = (df_use['대여스테이션'].astype('Int64') <= 5) & (df_use['반납스테이션'].astype('Int64') <= 5)
+df_sub = df_use[cnd]
+
+### 대여일 별 대여수 & 대여시간(초) & 이동거리 기초통계량
+df_group_date = df_use.groupby(['대여일']).apply(
+    lambda x: pd.Series({
+        '대여수':len(x),
+        '대여시간_합':sum(x.대여시간_초),
+        '이동거리_합': sum(x.이동거리),
+        '이동거리_평균': np.mean(x.이동거리),
+        '이동거리_최솟값': np.min(x.이동거리),
+        '이동거리_중앙값': np.median(x.이동거리),
+        '이동거리_최댓값': np.max(x.이동거리)
+                        }))
+
