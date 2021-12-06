@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15px">
+
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/flipper">
+
+        <!-- 버섯 갓 모양 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="버섯 갓 모양"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/j"
+                android:id="@+id/page1"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bell"
+                android:background="#FFFFFF"
+                android:text="종 모양"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/conical"
+                android:background="#FFFFFF"
+                android:text="원뿔 모양"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/flat"
+                android:background="#FFFFFF"
+                android:text="평평한 모양"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/knob"
+                android:background="#FFFFFF"
+                android:text="손잡이 모양"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sunken"
+                android:background="#FFFFFF"
+                android:text="움푹파인 모양"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/convex"
+                android:background="#FFFFFF"
+                android:text="볼록한 모양"/>
+
+        </LinearLayout>
+        <!-- 버섯 갓 표면 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 갓 표면"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fibrous"
+                android:background="#FFFFFF"
+                android:text="섬유질"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/grooves"
+                android:background="#FFFFFF"
+                android:text="홈이 있는"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/smooth"
+                android:background="#FFFFFF"
+                android:text="매끄러운"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scaly"
+                android:background="#FFFFFF"
+                android:text="불안정한"/>
+
+
+        </LinearLayout>
+        <!-- 버섯 갓 색상 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 갓 색상"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buff"
+                android:background="#FFFFFF"
+                android:text="황토색"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cinnamon"
+                android:background="#FFFFFF"
+                android:text="시나몬색"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/red"
+                android:background="#FFFFFF"
+                android:text="빨간색"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gray"
+                android:background="#FFFFFF"
+                android:text="회색"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/brown"
+                android:background="#FFFFFF"
+                android:text="갈색"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pink"
+                android:background="#FFFFFF"
+                android:text="분홍색"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/green"
+                android:background="#FFFFFF"
+                android:text="녹색"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/purple"
+                android:background="#FFFFFF"
+                android:text="보라색"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/white"
+                android:background="#FFFFFF"
+                android:text="흰색"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/yellow"
+                android:background="#FFFFFF"
+                android:text="노란색"/>
+
+        </LinearLayout>
+        <!-- 버섯 갓 멍, 흠집 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 갓 멍, 흠집"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bruises"
+                android:background="#FFFFFF"
+                android:text="멍"/>
+
+        </LinearLayout>
+        <!-- 버섯 냄새 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 냄새"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/almond"
+                android:background="#FFFFFF"
+                android:text="아몬드"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/creosote"
+                android:background="#FFFFFF"
+                android:text="크레오소트(탄소)"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/foul"
+                android:background="#FFFFFF"
+                android:text="역겨운 냄새"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/anise"
+                android:background="#FFFFFF"
+                android:text="아니스"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/musty"
+                android:background="#FFFFFF"
+                android:text="곰팡내"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/none"
+                android:background="#FFFFFF"
+                android:text="무취(냄새가 안나유)"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pungent"
+                android:background="#FFFFFF"
+                android:text="자극적인"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spicy"
+                android:background="#FFFFFF"
+                android:text="매운"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fishy"
+                android:background="#FFFFFF"
+                android:text="비린내"/>
+
+        </LinearLayout>
+        <!-- 버섯 주름살 모양 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 주름살 모양"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/attach"
+                android:background="#FFFFFF"
+                android:text="갓이랑 붙은"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/free"
+                android:background="#FFFFFF"
+                android:text="갓이랑 떨어진"/>
+
+       </LinearLayout>
+        <!-- 버섯 주름 너비 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 주름 너비"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/close"
+                android:background="#FFFFFF"
+                android:text="가까운"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/crowded"
+                android:background="#FFFFFF"
+                android:text="매우 촘촘한"/>
+
+        </LinearLayout>
+        <!-- 버섯 주름 크기 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 주름 크기"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/broad"
+                android:background="#FFFFFF"
+                android:text="넓은"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/narrow"
+                android:background="#FFFFFF"
+                android:text="좁은"/>
+
+
+        </LinearLayout>
+        <!-- 버섯 주름 색상-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 주름 색상"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g_buff"
+                android:background="#FFFFFF"
+                android:text="황토"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g_red"
+                android:background="#FFFFFF"
+                android:text="빨강"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g_gray"
+                android:background="#FFFFFF"
+                android:text="회색"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g_choco"
+                android:background="#FFFFFF"
+                android:text="초코"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g_black"
+                android:background="#FFFFFF"
+                android:text="검정"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g_brown"
+                android:background="#FFFFFF"
+                android:text="갈색"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g_orange"
+                android:background="#FFFFFF"
+                android:text="주황"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g_pink"
+                android:background="#FFFFFF"
+                android:text="분홍"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g_green"
+                android:background="#FFFFFF"
+                android:text="초록"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g_purple"
+                android:background="#FFFFFF"
+                android:text="보라"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g_white"
+                android:background="#FFFFFF"
+                android:text="하양"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g_yellow"
+                android:background="#FFFFFF"
+                android:text="노랑"/>
+
+        </LinearLayout>
+        <!-- 버섯 줄기 모양-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 줄기 모양"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/enlarging"
+                android:background="#FFFFFF"
+                android:text="크다"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tapering"
+                android:background="#FFFFFF"
+                android:text="가늘다"/>
+
+        </LinearLayout>
+        <!-- 버섯 줄기 뿌리-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 줄기 뿌리"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/missing"
+                android:background="#FFFFFF"
+                android:text="알수 없음"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bulbous"
+                android:background="#FFFFFF"
+                android:text="알뿌리 모양"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/club"
+                android:background="#FFFFFF"
+                android:text="클럽 모양"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/equal"
+                android:background="#FFFFFF"
+                android:text="일정한 모양"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rooted"
+                android:background="#FFFFFF"
+                android:text="뿌리"/>
+
+
+        </LinearLayout>
+        <!-- 버섯 줄기 윗부분 표면-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 줄기 윗 표면 고리"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/su_fibrous"
+                android:background="#FFFFFF"
+                android:text="섬유질"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/su_scaly"
+                android:background="#FFFFFF"
+                android:text="비늘"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/su_silky"
+                android:background="#FFFFFF"
+                android:text="실크"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/su_smooth"
+                android:background="#FFFFFF"
+                android:text="매끄러운"/>
+
+        </LinearLayout>
+        <!-- 버섯 줄기 아랫부분 표면-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 아래 표면 고리"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sd_fibrous"
+                android:background="#FFFFFF"
+                android:text="섬유질"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sd_scaly"
+                android:background="#FFFFFF"
+                android:text="비늘"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sd_silky"
+                android:background="#FFFFFF"
+                android:text="실크"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sd_smooth"
+                android:background="#FFFFFF"
+                android:text="매끄러운"/>
+
+        </LinearLayout>
+        <!-- 버섯 줄기 윗부분 색상-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 윗 고리 색상"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scu_buff"
+                android:background="#FFFFFF"
+                android:text="황토"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scu_cinnamon"
+                android:background="#FFFFFF"
+                android:text="시나몬"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scu_red"
+                android:background="#FFFFFF"
+                android:text="빨강"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scu_gray"
+                android:background="#FFFFFF"
+                android:text="회색"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scu_brown"
+                android:background="#FFFFFF"
+                android:text="갈색"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scu_orange"
+                android:background="#FFFFFF"
+                android:text="주황"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scu_pink"
+                android:background="#FFFFFF"
+                android:text="분홍"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scu_white"
+                android:background="#FFFFFF"
+                android:text="하양"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scu_yellow"
+                android:background="#FFFFFF"
+                android:text="노랑"/>
+
+        </LinearLayout>
+        <!-- 버섯 주름 아래부분 색상-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 아래 고리 색상"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scd_buff"
+                android:background="#FFFFFF"
+                android:text="황토"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scd_cinnamon"
+                android:background="#FFFFFF"
+                android:text="시나몬"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scd_red"
+                android:background="#FFFFFF"
+                android:text="빨강"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scd_gray"
+                android:background="#FFFFFF"
+                android:text="회색"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scd_brown"
+                android:background="#FFFFFF"
+                android:text="갈색"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scd_orange"
+                android:background="#FFFFFF"
+                android:text="주황"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scd_pink"
+                android:background="#FFFFFF"
+                android:text="분홍"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scd_white"
+                android:background="#FFFFFF"
+                android:text="하양"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scd_yellow"
+                android:background="#FFFFFF"
+                android:text="노랑"/>
+
+        </LinearLayout>
+        <!-- 버섯 베일 유형 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 베일 유형"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/partial"
+                android:background="#FFFFFF"
+                android:text="부분적인"/>
+
+            <!-- <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/universal"
+                android:background="#FFFFFF"
+                android:text="보편적인"/> -->
+
+        </LinearLayout>
+        <!-- 버섯 베일 색상-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 베일 색상"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vc_brown"
+                android:background="#FFFFFF"
+                android:text="갈색"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vc_orange"
+                android:background="#FFFFFF"
+                android:text="주황색"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vc_white"
+                android:background="#FFFFFF"
+                android:text="흰색"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vc_yellow"
+                android:background="#FFFFFF"
+                android:text="노랑색"/>
+
+        </LinearLayout>
+        <!-- 버섯 고리 갯수-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 고리 갯수"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/num_none"
+                android:background="#FFFFFF"
+                android:text="없음"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/num_one"
+                android:background="#FFFFFF"
+                android:text="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/num_two"
+                android:background="#FFFFFF"
+                android:text="2"/>
+
+        </LinearLayout>
+        <!-- 버섯 고리 유형-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 고리 유형"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <!-- <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cobwebby"
+                android:background="#FFFFFF"
+                android:text="거미줄"/> -->
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/evanescent"
+                android:background="#FFFFFF"
+                android:text="무상한"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/flaring"
+                android:background="#FFFFFF"
+                android:text="화려한"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/large"
+                android:background="#FFFFFF"
+                android:text="커다란"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rt_none"
+                android:background="#FFFFFF"
+                android:text="없음"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pendant"
+                android:background="#FFFFFF"
+                android:text="팬던트"/>
+
+            <!-- <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sheathing"
+                android:background="#FFFFFF"
+                android:text="피복?"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/zone"
+                android:background="#FFFFFF"
+                android:text="존?"/> -->
+
+        </LinearLayout>
+        <!-- 버섯 포자 색상-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 포자 색상"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_buff"
+                android:background="#FFFFFF"
+                android:text="황토"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_choco"
+                android:background="#FFFFFF"
+                android:text="초코"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_black"
+                android:background="#FFFFFF"
+                android:text="검정"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_brown"
+                android:background="#FFFFFF"
+                android:text="갈색"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_orange"
+                android:background="#FFFFFF"
+                android:text="주황"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_green"
+                android:background="#FFFFFF"
+                android:text="초록"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_purple"
+                android:background="#FFFFFF"
+                android:text="보라"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_white"
+                android:background="#FFFFFF"
+                android:text="하양"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_yellow"
+                android:background="#FFFFFF"
+                android:text="노랑"/>
+
+        </LinearLayout>
+        <!-- 버섯 개체군-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 개채군"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/abundant"
+                android:background="#FFFFFF"
+                android:text="풍부한"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clustered"
+                android:background="#FFFFFF"
+                android:text="무리"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numerous"
+                android:background="#FFFFFF"
+                android:text="많은"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scattered"
+                android:background="#FFFFFF"
+                android:text="드문드문"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/several"
+                android:background="#FFFFFF"
+                android:text="여럿이"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/solitary"
+                android:background="#FFFFFF"
+                android:text="홀로"/>
+
+        </LinearLayout>
+        <!-- 버섯 발견 장소-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버섯 발견 장소"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/woods"
+                android:background="#FFFFFF"
+                android:text="숲"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/grasses"
+                android:background="#FFFFFF"
+                android:text="잔디"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/leaves"
+                android:background="#FFFFFF"
+                android:text="낙옆 사이"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/meadows"
+                android:background="#FFFFFF"
+                android:text="초원"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/paths"
+                android:background="#FFFFFF"
+                android:text="길바닥"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/urban"
+                android:background="#FFFFFF"
+                android:text="도심지"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/waste"
+                android:background="#FFFFFF"
+                android:text="쓰레기장"/>
+
+
+
+        </LinearLayout>
+
+    </ViewFlipper>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/before"
+            android:layout_marginRight="10px"
+            android:layout_margin="1dp"
+            android:visibility="gone"
+            android:text="이전"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10px"
+            android:layout_margin="1dp"
+            android:id="@+id/next"
+            android:text="다음"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10px"
+            android:layout_margin="1dp"
+            android:visibility="gone"
+            android:id="@+id/result"
+            android:text="결과는?"/>
+    </LinearLayout>
+
+</LinearLayout>
